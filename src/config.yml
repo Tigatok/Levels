@@ -1,0 +1,5 @@
+########
+#Config#
+########
+Game:
+  InsufficientLevelsMessage: '&4You are not high enough level!'

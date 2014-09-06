@@ -1,0 +1,7 @@
+name: 'Levels'
+version: 0.0.0
+description: 'This plugin was made by Kato for Ketchupcoke.'
+author: 'Kato233'
+website: http://www.Marshallhosting.ca
+main: com.AcroTM.Levels.Driver.Levels
+prefix: '[LevelsLogger]'
