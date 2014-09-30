@@ -5,6 +5,7 @@ import com.AcroTM.Levels.com.AcroTM.Levels.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -20,6 +21,7 @@ public class LevelsListener implements Listener {
         Bukkit.getPluginManager().registerEvents(this, LevelsAPI.getLevels());
     }
 
+    @EventHandler
     public void onPlayerInteractEvent(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
@@ -50,6 +52,7 @@ public class LevelsListener implements Listener {
         }
     }
 
+    @EventHandler
     public void onPlayerAttackEvent(EntityDamageByEntityEvent event) {
         Player player = ((Player) event.getDamager()).getPlayer();
         int playerLevel = player.getLevel();
@@ -66,6 +69,7 @@ public class LevelsListener implements Listener {
         }
     }
 
+    @EventHandler
     public void onPlayerInventoryClickEvent(InventoryClickEvent event) {
         Material material = event.getCurrentItem().getType();
         Player player = ((Player) event.getWhoClicked()).getPlayer();
